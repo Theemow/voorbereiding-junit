@@ -5,7 +5,8 @@ public class FizzBuzzExecutor {
     public String execute(int i){
         int fizz = 3;
         int buzz = 5;
-        if(i % fizz == 0 && i % buzz == 0){
+        int fizzBuzz = 15;
+        if(i % fizzBuzz == 0){
             return "FizzBuzz";
         } else if (i % fizz == 0){
             return "Fizz";

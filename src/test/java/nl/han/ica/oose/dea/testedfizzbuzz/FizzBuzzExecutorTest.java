@@ -1,15 +1,20 @@
 package nl.han.ica.oose.dea.testedfizzbuzz;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class FizzBuzzExecutorTest {
 
+    private FizzBuzzExecutor sut;
+
+    @BeforeEach
+    public void setup(){
+        sut = new FizzBuzzExecutor();
+    }
+
     @Test
     void executeWithValidIntTest(){
-        // Arrange
-        var sut = new FizzBuzzExecutor();
-
         // Act
         var testValue = sut.execute(37);
 
@@ -19,9 +24,6 @@ class FizzBuzzExecutorTest {
 
     @Test
     void executeWithFizzTest(){
-        // Arrange
-        var sut = new FizzBuzzExecutor();
-
         // Act
         var testValue = sut.execute(18);
 
@@ -31,9 +33,6 @@ class FizzBuzzExecutorTest {
 
     @Test
     void executeWithBuzzTest(){
-        // Arrange
-        var sut = new FizzBuzzExecutor();
-
         // Act
         var testValue = sut.execute(250);
 
@@ -43,9 +42,6 @@ class FizzBuzzExecutorTest {
 
     @Test
     void executeWithFizzBuzzTest(){
-        // Arrange
-        var sut = new FizzBuzzExecutor();
-
         // Act
         var testValue = sut.execute(330);
 
